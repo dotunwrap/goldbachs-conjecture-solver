@@ -43,7 +43,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: webiny/action-conventional-commits@v1.3.0
   unit-tests:
-    needs: conventional-commits
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.toolchain == 'nightly' }}
     strategy:
